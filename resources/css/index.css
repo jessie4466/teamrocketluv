@@ -2,8 +2,6 @@
 
 
 
-
-
 html {
   font-size: 16px;
 }
@@ -23,6 +21,7 @@ body {
   width: 100%;
   letter-spacing: .1rem;
 }
+
 
 h1, h3 {
   text-align: center;
@@ -57,6 +56,7 @@ p, a, span {
 
 a {
   letter-spacing: .1rem;
+
 }
 
 a:link {
@@ -80,9 +80,9 @@ section {
   margin: 0 auto 5rem;
 }
 
+
 section .main {
   width: 100%;
-
 }
 
 .main {
@@ -149,7 +149,7 @@ nav {
 }
 
   .story p {
-    line-height: 1.rem;
+    line-height: 1.6rem;
   }
  }
 
@@ -157,28 +157,31 @@ nav {
 
 .pictures-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: baseline;
   flex-wrap: wrap;
 
 }
 
 .pictures img {
-  max-width: 50%;
-  height: auto;
+/*  min-width: 50%; */
+  width: 50%;
+/*  height: auto; */
 }
 
 
 @media only screen and (max-width: 1024px) {
   .pictures img {
-    max-width: 100%;
-
+    min-width: 100%;
+    width: 100%;
   }
 }
 
 .one {
   min-width: 100%;
+  width: 100%;
 }
+
 
 .col-outer {
   display: flex;
@@ -230,13 +233,16 @@ nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   margin-top: 3rem;
+  max-width: 100%;
 }
 
 .destination img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+
+
 /*  top: -10rem; */
 }
 
@@ -244,41 +250,36 @@ nav {
   position: absolute;
   top: 16rem;
   z-index: 25;
-  text-align: center;
+  max-width: 500px;
+  margin-left: -230px;
+  left: 50%;
 }
 
 .austin p {
   position: absolute;
   z-index: 25;
   top: 26rem;
+  line-height: 1.8rem;
   text-align: center;
-  max-width: 550px;
-  line-height: 2rem;
-
+  max-width: 400px;
+  margin-left: -200px;
+  left: 50%;
+  font-size: 1rem;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .austin h3 {
     top: 8rem;
     font-size: 1.8rem;
+    max-width: 400px;
+    margin-left: -200px;
+    left: 50%;
   }
 
   .austin p {
     visibility: hidden;
   }
 }
-
-@media only screen and (max-width: 1200px) and (min-width: 481px) {
-  .austin h3 {
-    top: 10rem;
-    font-size: 2rem;
-  }
-
-  .austin p {
-    top: 16rem;
-  }
-}
-
 
 
 /*
@@ -455,4 +456,8 @@ hr {
     width: 70%;
   }
 
+}
+
+a {
+  font-size: 1.1rem;
 }
